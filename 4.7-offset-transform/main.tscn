@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://dpgq5ow76c7pt"]
+
+[ext_resource type="Script" uid="uid://vkjrw3p6e2ww" path="res://hand.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://dqiqxlxvthi77" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://6kjte6h3b08i" path="res://card.tscn" id="1_ig7tw"]
+
+[node name="Main" type="Control" unique_id=2014561860]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h2yge")
+
+[node name="Hand" type="HBoxContainer" parent="." unique_id=219876334]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -150.0
+offset_right = 250.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+script = ExtResource("1_0xm2m")
+
+[node name="Card" parent="Hand" unique_id=1504152083 instance=ExtResource("1_ig7tw")]
+layout_mode = 2
+
+[node name="Card2" parent="Hand" unique_id=1868497715 instance=ExtResource("1_ig7tw")]
+layout_mode = 2
+
+[node name="Card3" parent="Hand" unique_id=346420670 instance=ExtResource("1_ig7tw")]
+layout_mode = 2
+
+[node name="Card4" parent="Hand" unique_id=1998722580 instance=ExtResource("1_ig7tw")]
+layout_mode = 2
+
+[node name="Card5" parent="Hand" unique_id=2119078324 instance=ExtResource("1_ig7tw")]
+layout_mode = 2
+
+[node name="Card6" parent="Hand" unique_id=611834293 instance=ExtResource("1_ig7tw")]
+layout_mode = 2
+
+[node name="Card7" parent="Hand" unique_id=2145848358 instance=ExtResource("1_ig7tw")]
+layout_mode = 2
+
+[node name="BtnAdd" type="Button" parent="." unique_id=1596956229]
+layout_mode = 0
+offset_right = 193.0
+offset_bottom = 65.0
+text = "增加1张牌"
+
+[node name="BtnRemove" type="Button" parent="." unique_id=1504726960]
+layout_mode = 0
+offset_top = 118.0
+offset_right = 193.0
+offset_bottom = 183.0
+text = "减少一张牌"
